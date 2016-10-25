@@ -19,6 +19,6 @@
 
 ![img](http://i1294.photobucket.com/albums/b605/josejapch/IV/hito%201/build%20history_zpstclgqonr.png)
 
-    Podemos ver cómo se realizó un primer "push" en el repositorio que provocaba un error. Una actualización después en el que ya, la construcción, se realiza correctamente y una tercera modificación que no provoca ningún error.
+Podemos ver cómo se realizó un primer "push" en el repositorio que provocaba un error. Una                                                 actualización después en el que ya, la construcción, se realiza correctamente y una tercera     modificación que no provoca ningún error.
     
 [![Build Status](https://travis-ci.org/josejapch/proyectoIV1617.svg?branch=master)](https://travis-ci.org/josejapch/proyectoIV1617)
