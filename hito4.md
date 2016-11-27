@@ -111,4 +111,4 @@ Para la disponibilidad online de nuestra imagen emplearemos DockerHub.
     
 - Si nos dirigimos a "Build Settings", podemos ver que la construccion se realizará cada vez que se haga un "push" a la rama "master".
 
-    ![img](imagen14)
+    ![img](https://github.com/josejapch/documentacion-Proyecto-IV/blob/master/imagenesH4/IV4%20imagen14.png)
