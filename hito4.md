@@ -112,3 +112,23 @@ Para la disponibilidad online de nuestra imagen emplearemos DockerHub.
 - Si nos dirigimos a "Build Settings", podemos ver que la construccion se realizará cada vez que se haga un "push" a la rama "master".
 
     ![img](https://github.com/josejapch/documentacion-Proyecto-IV/blob/master/imagenesH4/IV4%20imagen14.png)
+    
+### **4. Script.**
+
+Se ha creado un [script](https://github.com/josejapch/proyectoIV1617/blob/master/docker-up.sh) para la automatización de la instalación de Docker (si no está instalado), la obtención de la imagen creada con la aplicación y su ejecución.
+
+En el script se ha optado por la instalación de Docker de forma más simple, que la explicada en el punto 1, obtenida de la [documentación de Docker](https://docs.docker.com/v1.8/linux/step_one/). El script sigue los siguientes pasos:
+
+- Pregunta por Docker: ```which docker```
+
+- Almacena la respuesta (0 si encuentra Docker o 1 si no): ```status_docker=$?```
+
+- Si no está, lo instala: ```wget -qO- https://get.docker.com/ | sh```
+
+- Si está, no lo instala.
+
+- Pone en marcha el servicio de Docker: ```service docker start```
+
+- Obtiene la imagen de la aplicación: ```docker pull josejapch/proyectoiv1617```
+
+- Lanza la imagen: ```docker run -i -t josejapch/proyectoiv1617 /bin/bash```
