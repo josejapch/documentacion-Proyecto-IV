@@ -4,7 +4,7 @@
 
 Aprovechando la cuenta gratuita durante un mes proporcionada por [J. J. Merelo Guervós](https://github.com/JJ) gracias a [Microsoft](https://www.microsoft.com/es-es/), alojaremos nuestra aplicación web en el IaaS Azure.
 
-Para poder trabajar con azure a través de la consola de Linux, tendremos que seguir los siguientes pasos:
+Para poder trabajar con Azure a través de la consola de Linux, tendremos que seguir los siguientes pasos:
 
 - Instalamos el gestor de paquetes de javascript [npm](https://www.npmjs.com/) con el comando:
 
@@ -82,7 +82,7 @@ Para establecer el provisionamiento de nuestra máquina virtual crearemos un "pl
 
 En nuesto [queueplaybook](https://github.com/josejapch/proyectoIV1617/blob/master/azure/queueplaybook.yml) se le está indicando que:
 
-- El usuario remoto será el indicado en remote_user (debe rellenarlo quien va a realizar el despliegue con el usuario que prefiera).
+- El usuario remoto será el indicado en remote_user.
 - La opción "become" nos permite conectarnos como otro usuario distinto al que se ha logueado, es decir, con "become: yes" y "become_method: sudo" estamos indicando que seremos un usuario con privilegios de superusuario.
 - En "tasks" indicamos las tareas que queremos que realice para el provisionamiento.
     - Actualice el repositorio de la máquina virtual.
@@ -141,7 +141,7 @@ Comenzaremos a ver el proceso de creación de la máquina virtual y cómo aplica
 
 ![](https://github.com/josejapch/documentacion-Proyecto-IV/blob/master/imagenesH5/iv%209.png)
 
-*NOTA: La imagen no corresponde a al despliegue de la versión final sino a una versión previa que dió error, de todas formas sirve como imagen ilustrativa de lo que nos encontramos al ejecutar el comando."*
+*NOTA: La imagen no corresponde al despliegue de la versión final sino a una versión previa que dió error, de todas formas sirve como imagen ilustrativa de lo que nos encontramos al ejecutar el comando.*
 
 ### **3. Fabric**
 
@@ -168,9 +168,11 @@ Donde nombreDNSmv es el nombre de DNS asignado a la máquina virtual.
 
 ![](https://github.com/josejapch/documentacion-Proyecto-IV/blob/master/imagenesH5/iv%20final.png)
 
+[Enlace a despliegue en Azure](http://winter-glitter-24.westeurope.cloudapp.azure.com/)
+
 ### **4. Script de automatización**
 
-En este caso no he podido realizar un script que automatizara todo el proceso. En mi caso, en el momento de crear una máquina virtual, Azure asigna un nombre de DNS aleatorio. Dicho nombre es necesario para ejecutar funciones del fabfile.py (como hemos visto en el caso anterior) por lo que me ha resultado imposible realizar un script que creara la máquina virtual, obtuviera el nombre de DNS y pudiera ejecutar las funciones necesarias para la ejecución de la aplicación. Además cabe la posibilidad de que quien quiera usar la aplicación también disponga de un dominio personalizado, lo que haría que la ejecución de funciones quedara inutilizada por no tener un nombre de DNS fijo.
+En este caso no he podido realizar un script que automatizara todo el proceso. En mi caso, en el momento de crear una máquina virtual, Azure asigna un nombre de DNS aleatorio. Dicho nombre es necesario para ejecutar funciones del fabfile.py (como hemos visto en el punto anterior) por lo que me ha resultado imposible realizar un script que creara la máquina virtual, obtuviera el nombre de DNS y pudiera ejecutar las funciones necesarias para la ejecución de la aplicación. Además cabe la posibilidad de que quien quiera usar la aplicación también disponga de un dominio personalizado, lo que haría que la ejecución de funciones quedara inutilizada por no tener un nombre de DNS fijo.
 
 En este caso he realizado dos scripts, uno para crear la máquina virtual y otro para instalar y ejecutar la aplicación, siendo necesario tan solo la ejecución de dos comandos en lugar de todos los explicados anteriormente. En los puntos siguientes explicamos brevemente el funcionamiento de los scripts.
 
