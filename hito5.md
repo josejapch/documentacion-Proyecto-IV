@@ -153,12 +153,14 @@ Podemos instalarla con el comando:
 
 Necesitamos un [fabfile](https://github.com/josejapch/proyectoIV1617/blob/master/azure/fabfile.py) que estará escrito en Python y contendrá las funciones que queremos ejecutar remotamente en el servidor.
 
-![](https://github.com/josejapch/documentacion-Proyecto-IV/blob/master/imagenesH5/fabfile2.png)
+![](https://github.com/josejapch/documentacion-Proyecto-IV/blob/master/imagenesH5/fabfilefinal.png)
 
 En este caso, tendremos tres funciones:
 - **install_app:** Con la que descargaremos nuestra aplicación y dejaremos lista para que empiece a funcionar.
 - **app_up:** Con la que podremos en marcha nuestra aplicacion.
 - **test_up:** Con la que podremos realizar los test de la aplicacion.
+- **app_down:** Con la que podremos apagar la aplicacion.
+- **delete_app:** Con la que podremos eliminar los archivos de la aplicacion.
 
 Para ejecutar estas funciones en nuestro servidor, usaremos el comando:
 
